@@ -35,6 +35,7 @@ class HomePageQA:
         for options in all_options:
             if options.text_content() == "Yes":
                 options.click()
+                expect(self.driver.locator('p.mt-3')).to_contain_text("You have selected",ignore_case=True)
             else:
                 logger.info("given option is not available")
             time.sleep(20)
