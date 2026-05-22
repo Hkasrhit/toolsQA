@@ -38,4 +38,7 @@ class HomePageQA:
                 expect(self.driver.locator('p.mt-3')).to_contain_text("You have selected",ignore_case=True)
             else:
                 logger.info("given option is not available")
-            time.sleep(20)
+
+    def web_tables(self):
+        self.driver.locator('a[href="/webtables"]').click()
+        expect(self.driver.locator('h1.text-center')).to_contain_text('web tables',ignore_case=True)
