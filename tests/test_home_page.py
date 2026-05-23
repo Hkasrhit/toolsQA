@@ -13,5 +13,6 @@ class TestHomePage:
         self.home_page.text_box()
         self.home_page.check_box()
         self.home_page.radio_btn()
+        self.home_page.web_tables()
 
 
